@@ -3,7 +3,10 @@ import React, {useState} from "react";
 function Counter() {
     const [counter, setCounter] = React.useState(0);
     const onClick = () => {
-        setCounter(counter + 1);
+        // setCounter(counter + 1);
+        // (state 값 => 함수)
+        setCounter((current) => current +1); // 현재값에 업데이트 더좋은방법임
+
     };
 
     return (
