@@ -9,12 +9,15 @@ function Counter() {
 
     };
 
+    function Btn() {
+
+    }
+
     return (
       <div>
           <h3>Total Click: {counter}</h3>
           <button onClick={onClick}>Click me</button>
       </div>
-
     );
 }
 export default Counter;
