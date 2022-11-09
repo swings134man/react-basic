@@ -3,6 +3,7 @@ import './App.css';
 import React from "react";
 
 import Counter from "./Counter";
+import Convert from './Convert';
 
 
 function App() {
@@ -26,7 +27,8 @@ function App() {
   // );
 
     return (
-        <Counter/>
+        // <Counter/>
+        <Convert/>
     );
 
     // const [counter, setCounter] = React.useState(0);
