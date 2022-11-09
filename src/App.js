@@ -1,10 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
 import React from "react";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 
 import Counter from "./Counter";
 import Convert from './Convert';
+import { Link } from 'react-router-dom';
 
+
+function ToCounter() {
+
+  <button>
+    <Link to={'/Convert'}>
+      카운터
+    </Link>
+    </button>
+
+}
 
 function App() {
   // return (
@@ -28,8 +41,19 @@ function App() {
 
     return (
         // <Counter/>
-        <Convert/>
+        // <Convert/>
+        <Router>
+          <Link to="/Counter">카운터</Link><br/>
+          <Link to="/Convert">컨버트</Link>
+
+          <Routes>
+            <Route path='/Counter' element={<Counter/>}/>
+            <Route path='/Convert' element={<Convert/>}/>
+          </Routes>
+
+        </Router>
     );
+
 
     // const [counter, setCounter] = React.useState(0);
     // const onClick = () => {

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function Convert() {
   // state는 array 로 제공. 첫번째요소는 데이터, 두번쨰 요소는 데이터를 수정하기 위한 함수.
   const [minutes, setMinutes] = React.useState(0);
-  const[flipped, setFlipped] = React.useState(false);
+  const [flipped, setFlipped] = React.useState(false); // 기본값 false 지정.
 
   const onChange = (event) => {
     // event 안에는 onChange로 바뀐 결과들과 여러 요소가 포함됨.
@@ -11,7 +11,7 @@ function Convert() {
     // console.log(event.target.value);
   };
   const reset = () => setMinutes(0);
-  const onFlip = () => setFlipped((current) => !current); //flipped의 반대값으로 바꿔주는것. (클릭시.)
+  const onFlip = () => setFlipped((current) => !current); //(클릭시.) false <-> true 변경.
 
   
 
