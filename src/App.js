@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
 import Counter from "./Counter";
@@ -42,31 +42,36 @@ function App() {
     return (
         // <Counter/>
         // <Convert/>
-        <Router>
-          <Link to="/Counter">카운터</Link><br/>
-          <Link to="/Convert">컨버트</Link>
+          
+          // <Router>
+          //   <Link to="/Counter">카운터</Link><br/>
+          //   <Link to="/Convert">컨버트</Link>
 
-          <Routes>
-            <Route path='/Counter' element={<Counter/>}/>
-            <Route path='/Convert' element={<Convert/>}/>
-          </Routes>
+          //   <Routes>
+          //     <Route path='/Counter' element={<Counter/>}/>
+          //     <Route path='/Convert' element={<Convert/>}/>
+          //   </Routes>
 
-        </Router>
+          // </Router>
+
+           <Router>
+            <button>
+              <Link to="/Counter">카운터</Link><br/>
+            </button>
+
+            <button>
+              <Link to="/Convert">컨버트</Link>
+            </button>
+            
+            <Routes>
+              <Route path='/Counter' element={<Counter/>}/>
+              <Route path='/Convert' element={<Convert/>}/>
+            </Routes>
+
+          </Router>
+
+
     );
-
-
-    // const [counter, setCounter] = React.useState(0);
-    // const onClick = () => {
-    //     setCounter(counter + 1);
-    // };
-    //
-    // return (
-    //     <div>
-    //         <h3>Total Click: {counter}</h3>
-    //         <button onClick={onClick}>Click me</button>
-    //     </div>
-    //
-    // );
 }
 
 export default App;
