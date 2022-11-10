@@ -20,7 +20,7 @@ function Convert() {
 
   return (
     <div>
-      <h1>Super Converter</h1>
+      <h1>Super Mintues to Hour Converter</h1>
       <div>
         <label htmlFor="minutes">Minutes</label>
         <input

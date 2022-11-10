@@ -6,6 +6,8 @@ import { BrowserRouter, BrowserRouter as Router, Route, Routes } from 'react-rou
 
 import Counter from "./Counter";
 import Convert from './Convert';
+import ConvertDit from './ConvertDit';
+
 import { Link } from 'react-router-dom';
 
 
@@ -60,9 +62,11 @@ function App() {
               <Link to="/Counter">카운터</Link><br/>
             </button>
             <button>
-              <Link to="/Convert">컨버트</Link>
+              <Link to="/Convert">컨버트 time</Link>
             </button> 
-            
+            <button>
+              <Link to="/ConvertDit">컨버트 거리</Link>
+            </button> 
             <hr/>
 
             <h2>Props</h2>
@@ -72,6 +76,7 @@ function App() {
             <Routes>
               <Route path='/Counter' element={<Counter/>}/>
               <Route path='/Convert' element={<Convert/>}/>
+              <Route path='/ConvertDit' element={<ConvertDit/>}/>
             </Routes>
 
           </Router>
