@@ -55,14 +55,20 @@ function App() {
           // </Router>
 
            <Router>
+            <h2>State & Recap</h2>
             <button>
               <Link to="/Counter">카운터</Link><br/>
             </button>
-
             <button>
               <Link to="/Convert">컨버트</Link>
-            </button>
+            </button> 
             
+            <hr/>
+
+            <h2>Props</h2>
+            
+
+            <hr/>
             <Routes>
               <Route path='/Counter' element={<Counter/>}/>
               <Route path='/Convert' element={<Convert/>}/>
