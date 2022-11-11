@@ -7,6 +7,7 @@ import { BrowserRouter, BrowserRouter as Router, Route, Routes } from 'react-rou
 import Counter from "./Counter";
 import Convert from './Convert';
 import ConvertDit from './ConvertDit';
+import KmToMile from './test/KmToMile';
 
 import { Link } from 'react-router-dom';
 
@@ -67,6 +68,9 @@ function App() {
             <button>
               <Link to="/ConvertDit">컨버트 거리</Link>
             </button> 
+            <button>
+              <Link to="/KmToMile">km TO Mile</Link>
+            </button> 
             <hr/>
 
             <h2>Props</h2>
@@ -76,7 +80,8 @@ function App() {
             <Routes>
               <Route path='/Counter' element={<Counter/>}/>
               <Route path='/Convert' element={<Convert/>}/>
-              <Route path='/ConvertDit' element={<ConvertDit/>}/>
+              <Route path='/ConvertDit' element={<ConvertDit/>}/> 
+              <Route path='/KmToMile' element={<KmToMile/>}/>
             </Routes>
 
           </Router>
