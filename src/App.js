@@ -12,6 +12,7 @@ import KmToMile from './test/KmToMile';
 
 // 2장 : props
 import PropsEx from './props/PropsEx';
+import PropsEx2 from './props/PropsEx2';
 
 
 function ToCounter() {
@@ -61,7 +62,9 @@ function App() {
             <button>
               <Link to="/PropsEx">First Prop</Link>
             </button> 
-
+            <button>
+              <Link to="/PropsEx2">Second Prop</Link>
+            </button> 
 
             <hr/>
             <Routes>
@@ -70,6 +73,7 @@ function App() {
               <Route path='/ConvertDit' element={<ConvertDit/>}/> 
               <Route path='/KmToMile' element={<KmToMile/>}/>
               <Route path='/PropsEx' element={<PropsEx/>}/>
+              <Route path='/PropsEx2' element={<PropsEx2/>}/>
             </Routes>
 
           </Router>
