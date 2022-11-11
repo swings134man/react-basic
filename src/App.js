@@ -2,14 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 import React from "react";
 import { BrowserRouter, BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-
+// 1장
 import Counter from "./Counter";
 import Convert from './Convert';
 import ConvertDit from './ConvertDit';
 import KmToMile from './test/KmToMile';
 
-import { Link } from 'react-router-dom';
+// 2장 : props
+import PropsEx from './props/PropsEx';
 
 
 function ToCounter() {
@@ -23,24 +25,6 @@ function ToCounter() {
 }
 
 function App() {
-  // return (
-  //   <div className="App">
-  //     <header className="App-header">
-  //       <img src={logo} className="App-logo" alt="logo" />
-  //       <p>
-  //         Edit <code>src/App.js</code> and save to reload.
-  //       </p>
-  //       <a
-  //         className="App-link"
-  //         href="https://reactjs.org"
-  //         target="_blank"
-  //         rel="noopener noreferrer"
-  //       >
-  //         Learn React
-  //       </a>
-  //     </header>
-  //   </div>
-  // );
 
     return (
         // <Counter/>
@@ -74,7 +58,10 @@ function App() {
             <hr/>
 
             <h2>Props</h2>
-            
+            <button>
+              <Link to="/PropsEx">First Prop</Link>
+            </button> 
+
 
             <hr/>
             <Routes>
@@ -82,6 +69,7 @@ function App() {
               <Route path='/Convert' element={<Convert/>}/>
               <Route path='/ConvertDit' element={<ConvertDit/>}/> 
               <Route path='/KmToMile' element={<KmToMile/>}/>
+              <Route path='/PropsEx' element={<PropsEx/>}/>
             </Routes>
 
           </Router>
